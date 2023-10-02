@@ -6,7 +6,11 @@
 #define BAUD_RATE 57600
 
 #define PIN_SHUTTER_TRIGGER A1
+
+//PAN HALL IS H7
 #define PIN_PAN_HALL A3
+
+//TILT HALL IS H6
 #define PIN_TILT_HALL A4
 #define PIN_SLIDER_HALL 2
 #define PIN_INPUT_VOLTAGE A5
@@ -14,13 +18,9 @@
 #define PIN_MS1 11
 #define PIN_MS2 10
 
-//#define PIN_STEP_SLIDER 4
-//#define PIN_DIRECTION_SLIDER 3
-//#define PIN_STEP_TILT 6
-//#define PIN_DIRECTION_TILT 5
-
 #define PIN_STEP_SLIDER 6
 #define PIN_DIRECTION_SLIDER 5
+
 #define PIN_STEP_TILT 4
 #define PIN_DIRECTION_TILT 3
 
@@ -59,21 +59,21 @@
 #define INSTRUCTION_TRIGGER_SHUTTER 'c'
 #define INSTRUCTION_AUTO_HOME 'A'
 #define INSTRUCTION_DEBUG_STATUS 'R'
-#define INSTRUCTION_EXECUTE_MOVES ';'
-#define INSTRUCTION_ADD_POSITION '#'
-#define INSTRUCTION_STEP_FORWARD '>'
-#define INSTRUCTION_STEP_BACKWARD '<'
-#define INSTRUCTION_JUMP_TO_START '['
-#define INSTRUCTION_JUMP_TO_END ']'
-#define INSTRUCTION_EDIT_ARRAY 'E'
-#define INSTRUCTION_ADD_DELAY 'd'
-#define INSTRUCTION_EDIT_DELAY 'D'
-#define INSTRUCTION_CLEAR_ARRAY 'C'
+//#define INSTRUCTION_EXECUTE_MOVES ';'
+//#define INSTRUCTION_ADD_POSITION '#'
+//#define INSTRUCTION_STEP_FORWARD '>'
+//#define INSTRUCTION_STEP_BACKWARD '<'
+//#define INSTRUCTION_JUMP_TO_START '['
+//#define INSTRUCTION_JUMP_TO_END ']'
+//#define INSTRUCTION_EDIT_ARRAY 'E'
+//#define INSTRUCTION_ADD_DELAY 'd'
+//#define INSTRUCTION_EDIT_DELAY 'D'
+//#define INSTRUCTION_CLEAR_ARRAY 'C'
 #define INSTRUCTION_SAVE_TO_EEPROM 'U'
-#define INSTRUCTION_PANORAMICLAPSE 'L'
-#define INSTRUCTION_ANGLE_BETWEEN_PICTURES 'b'
-#define INSTRUCTION_DELAY_BETWEEN_PICTURES 'B'
-#define INSTRUCTION_TIMELAPSE 'l'
+//#define INSTRUCTION_PANORAMICLAPSE 'L'
+//#define INSTRUCTION_ANGLE_BETWEEN_PICTURES 'b'
+//#define INSTRUCTION_DELAY_BETWEEN_PICTURES 'B'
+//#define INSTRUCTION_TIMELAPSE 'l'
 #define INSTRUCTION_SLIDER_MILLIMETRES 'x'
 #define INSTRUCTION_INVERT_SLIDER 'j'
 #define INSTRUCTION_SET_SLIDER_SPEED 'X'
@@ -152,15 +152,15 @@ float panStepsToDegrees(long);
 float panStepsToDegrees(float);
 float tiltStepsToDegrees(long);
 float tiltStepsToDegrees(float);
-int addPosition(void);
-void clearKeyframes(void);
-void executeMoves(int);
-void moveToIndex(int);
-void gotoFirstKeyframe(void);
-void gotoLastKeyframe(void);
-void editKeyframe(void);
-void addDelay(unsigned int ms);
-void editDelay(unsigned int ms);
+//int addPosition(void);
+//void clearKeyframes(void);
+//void executeMoves(int);
+//void moveToIndex(int);
+//void gotoFirstKeyframe(void);
+//void gotoLastKeyframe(void);
+//void editKeyframe(void);
+//void addDelay(unsigned int ms);
+//void editDelay(unsigned int ms);
 void printKeyframeElements(void);
 void saveEEPROM(void);
 void printEEPROM(void);
@@ -170,8 +170,8 @@ void invertTiltDirection(bool);
 int setTargetPositions(float, float, float);
 void toggleAutoHoming(void);
 void triggerCameraShutter(void);
-void panoramiclapseInterpolation(float, float, float, float, float, float, float, unsigned long);
-void panoramiclapse(float, unsigned long, int);
+//void panoramiclapseInterpolation(float, float, float, float, float, float, float, unsigned long);
+//void panoramiclapse(float, unsigned long, int);
 long sliderMillimetresToSteps(float);
 float sliderStepsToMillimetres(long);
 void sliderMoveTo(float);
